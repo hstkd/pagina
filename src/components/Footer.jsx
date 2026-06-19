@@ -35,6 +35,7 @@ export default function Footer() {
           <a href="#sedes">Sedes</a>
           <a href="#horarios">Horarios</a>
           <a href="#precios">Planes</a>
+          <a href="#faq">Preguntas frecuentes</a>
           <a href="#contacto">Clase de prueba</a>
         </nav>
 

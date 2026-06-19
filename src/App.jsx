@@ -12,6 +12,7 @@ import Locations from './components/Locations'
 import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
+import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import WhatsAppFab from './components/WhatsAppFab'
@@ -36,6 +37,7 @@ export default function App() {
         <Gallery />
         <Testimonials />
         <Pricing />
+        <FAQ />
         <CTA />
       </main>
       <Footer />

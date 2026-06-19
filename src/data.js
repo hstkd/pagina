@@ -168,6 +168,41 @@ export const GALLERY = [
   { caption: 'Defensa personal', tag: 'Senior', span: '', src: '' },
 ]
 
+export const FAQS = [
+  {
+    q: '¿Desde qué edad se puede empezar?',
+    a: 'Desde los 4 años con el programa TaekwonKids. Tenemos grupos para todas las edades: infantiles, cadetes y senior. Nunca es tarde para empezar.',
+  },
+  {
+    q: '¿Necesito experiencia previa?',
+    a: 'Para nada. La gran mayoría de nuestros alumnos empieza desde cero. Te acompañamos paso a paso desde el cinturón blanco.',
+  },
+  {
+    q: '¿Ofrecen clase de prueba?',
+    a: 'Sí, tu primera clase de prueba es gratuita y sin compromiso. Resérvala por WhatsApp eligiendo la sede de Quito o Cumbayá.',
+  },
+  {
+    q: '¿Qué necesito para mi primera clase?',
+    a: 'Solo ropa cómoda y muchas ganas. El dobok (uniforme oficial) lo puedes adquirir más adelante, cuando decidas continuar.',
+  },
+  {
+    q: '¿Cuánto cuestan las clases?',
+    a: 'Tenemos planes desde $60 al mes. El valor exacto depende de la edad y la sede; escríbenos por WhatsApp y te damos toda la información.',
+  },
+  {
+    q: '¿Dónde están ubicados?',
+    a: 'En dos sedes: Quito (Av. Brasil N46-88 y Lucas Majano) y Cumbayá (Francisco de Orellana 362). Entrena en la que mejor te quede.',
+  },
+  {
+    q: '¿Puedo competir?',
+    a: 'Claro. Contamos con escuelas y equipos de competencia en las dos modalidades olímpicas: Kyorugi (combate) y Poomsae (formas).',
+  },
+  {
+    q: '¿El Taekwondo es seguro para los niños?',
+    a: 'Sí. Trabajamos en un ambiente seguro y motivador, con técnica progresiva y un fuerte enfoque en valores como el respeto, la disciplina y la confianza.',
+  },
+]
+
 export const TESTIMONIALS = [
   {
     text: 'Mi hija llegó tímida y hoy entrena con una seguridad increíble. El profe Henry es excepcional con los niños.',
