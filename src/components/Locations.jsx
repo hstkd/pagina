@@ -1,5 +1,7 @@
 import { LOCATIONS } from '../data'
 
+const enc = (s) => encodeURIComponent(s)
+
 export default function Locations() {
   return (
     <section className="section" id="sedes">
@@ -16,44 +18,64 @@ export default function Locations() {
         </header>
 
         <div className="locations">
-          {LOCATIONS.map((l, i) => (
-            <a
-              key={l.city}
-              href={l.mapsUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="location glass reveal"
-              style={{ transitionDelay: `${i * 90}ms` }}
-            >
-              <div className="location__pin" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinejoin="round"
+          {LOCATIONS.map((l, i) => {
+            const full = `${l.address}, ${l.city}, Ecuador`
+            const embed = `https://www.google.com/maps?q=${enc(full)}&output=embed`
+            const directions = `https://www.google.com/maps/dir/?api=1&destination=${enc(full)}`
+            return (
+              <article
+                className="location glass reveal"
+                key={l.city}
+                style={{ transitionDelay: `${i * 90}ms` }}
+              >
+                <div className="location__map">
+                  <iframe
+                    title={`Mapa de la sede de ${l.city}`}
+                    src={embed}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
                   />
-                  <circle cx="12" cy="10" r="2.6" fill="currentColor" />
-                </svg>
-              </div>
-              <div className="location__body">
-                <h3>{l.city}</h3>
-                <p>{l.address}</p>
-                <span className="location__link">
-                  Ver en Google Maps
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M7 17 17 7M9 7h8v8"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </a>
-          ))}
+                </div>
+                <div className="location__content">
+                  <div className="location__head">
+                    <div className="location__pin" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinejoin="round"
+                        />
+                        <circle cx="12" cy="10" r="2.6" fill="currentColor" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3>{l.city}</h3>
+                      <p>{l.address}</p>
+                    </div>
+                  </div>
+                  <div className="location__actions">
+                    <a href={directions} target="_blank" rel="noreferrer" className="btn btn-primary">
+                      Cómo llegar
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M5 12h14M13 6l6 6-6 6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </a>
+                    <a href={l.mapsUrl} target="_blank" rel="noreferrer" className="btn btn-ghost">
+                      Ver en Maps
+                    </a>
+                  </div>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
