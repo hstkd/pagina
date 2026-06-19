@@ -203,21 +203,29 @@ export const FAQS = [
   },
 ]
 
+// Reseñas reales publicadas en Google.
+export const REVIEWS_URL = 'https://maps.app.goo.gl/VDM2kH2hRHSEkM3m8'
+
 export const TESTIMONIALS = [
   {
-    text: 'Mi hija llegó tímida y hoy entrena con una seguridad increíble. El profe Henry es excepcional con los niños.',
-    name: 'Marta Giménez',
-    role: 'Madre de alumna',
+    text: 'Sin duda una de las mejores academias de taekwondo en Ecuador, enseña con el ejemplo.',
+    name: 'Fredy Hidalgo',
+    stars: 5,
   },
   {
-    text: 'Empecé de adulto sin haber hecho deporte y un año después estoy en la mejor forma de mi vida.',
-    name: 'Carlos Vidal',
-    role: 'Programa Senior',
+    text: 'Excelente dojang tanto para principiantes como para competidores avanzados. Recomiendo mucho la academia por la calidad de enseñanza que brindan sus profesores así como por los valores que se transmiten a diario.',
+    name: 'Paula Poveda',
+    stars: 5,
   },
   {
-    text: 'La preparación del equipo de competencia es de otro nivel. Conseguí mi primera medalla.',
-    name: 'Aitana López',
-    role: 'Equipo Kyorugi',
+    text: 'La instalación muy amplia, los profes, excelentes profesionales, y sobre todo practican el compañerismo, el trabajo en equipo y amor a las artes marciales.',
+    name: 'Laura Imba',
+    stars: 5,
+  },
+  {
+    text: 'Recomiendo totalmente la academia Henry Sigchos Taekwondo. Es un lugar donde no solo aprendes técnica, disciplina y constancia, sino que también te sientes motivada, fuerte y acompañada en todo el proceso. ¡Las clases tienen una energía increíble y los Profes son lo máximo! 💪🔥',
+    name: 'Emi Betancourt',
+    stars: 5,
   },
 ]
 
