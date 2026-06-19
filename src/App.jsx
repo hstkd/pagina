@@ -9,6 +9,7 @@ import Belts from './components/Belts'
 import Instructors from './components/Instructors'
 import Schedule from './components/Schedule'
 import Locations from './components/Locations'
+import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
@@ -32,6 +33,7 @@ export default function App() {
         <Instructors />
         <Schedule />
         <Locations />
+        <Gallery />
         <Testimonials />
         <Pricing />
         <CTA />

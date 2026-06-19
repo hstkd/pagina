@@ -6,6 +6,7 @@ const LINKS = [
   { href: '#filosofia', label: 'Filosofía' },
   { href: '#maestros', label: 'Maestros' },
   { href: '#horarios', label: 'Horarios' },
+  { href: '#galeria', label: 'Galería' },
   { href: '#sedes', label: 'Sedes' },
   { href: '#precios', label: 'Planes' },
 ]

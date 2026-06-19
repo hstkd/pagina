@@ -141,17 +141,31 @@ export const INSTRUCTORS = [
   },
 ]
 
-// sede: 'quito' = solo disponible en la sede de Quito.
-// El resto de horarios (tarde) son iguales en Quito y Cumbayá.
-const MORNING = { time: '07:00', name: 'Todas las edades', sede: 'quito' }
+// Horario de lunes a viernes (mismo todos los días).
+// quito / cumbaya: indica en qué sede está disponible cada turno.
+export const SCHEDULE_WEEK = [
+  { time: '07:00 – 08:00', clase: 'Todas las edades', quito: true, cumbaya: false },
+  { time: '16:00 – 17:00', clase: 'TaekwonKids', quito: true, cumbaya: true },
+  { time: '17:00 – 18:00', clase: 'Infantiles', quito: true, cumbaya: true },
+  { time: '18:00 – 19:00', clase: 'Cadetes', quito: true, cumbaya: true },
+  { time: '19:00 – 20:00', clase: 'Senior', quito: true, cumbaya: true },
+]
 
-export const SCHEDULE = [
-  { day: 'Lunes', slots: [MORNING, { time: '17:00', name: 'TaekwonKids' }, { time: '18:00', name: 'Infantiles' }, { time: '20:00', name: 'Senior' }] },
-  { day: 'Martes', slots: [MORNING, { time: '18:00', name: 'Cadetes' }, { time: '20:00', name: 'Élite' }] },
-  { day: 'Miércoles', slots: [MORNING, { time: '17:00', name: 'TaekwonKids' }, { time: '18:00', name: 'Infantiles' }, { time: '20:00', name: 'Senior' }] },
-  { day: 'Jueves', slots: [MORNING, { time: '18:00', name: 'Cadetes' }, { time: '20:00', name: 'Élite' }] },
-  { day: 'Viernes', slots: [MORNING, { time: '18:00', name: 'Kyorugi' }, { time: '20:00', name: 'Poomsae' }] },
-  { day: 'Sábado', slots: [{ time: '10:00', name: 'Equipos' }, { time: '11:30', name: 'Entreno abierto' }] },
+export const SCHEDULE_SATURDAY = {
+  time: '08:00 – 13:00',
+  clase: 'Escuelas de Competencia',
+}
+
+// Galería. Para usar fotos reales, coloca las imágenes en /public/gallery/
+// y añade "src: '/gallery/archivo.jpg'" a cada elemento.
+export const GALLERY = [
+  { caption: 'Nuestro dojang', tag: 'Instalaciones', span: 'wide', src: '' },
+  { caption: 'Clase TaekwonKids', tag: 'Infantil', span: '', src: '' },
+  { caption: 'Entrenamiento de combate', tag: 'Kyorugi', span: '', src: '' },
+  { caption: 'Poomsae', tag: 'Formas', span: '', src: '' },
+  { caption: 'Equipo de competencia', tag: 'Élite', span: 'tall', src: '' },
+  { caption: 'Examen de grado', tag: 'Cinturones', span: '', src: '' },
+  { caption: 'Defensa personal', tag: 'Senior', span: '', src: '' },
 ]
 
 export const TESTIMONIALS = [

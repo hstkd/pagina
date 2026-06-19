@@ -26,6 +26,7 @@ export default function Footer() {
           <a href="#programas">Programas</a>
           <a href="#filosofia">Filosofía</a>
           <a href="#maestros">Maestros</a>
+          <a href="#galeria">Galería</a>
           <a href="#cinturones">Cinturones</a>
         </nav>
 
