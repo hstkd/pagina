@@ -10,8 +10,10 @@ export default function Pricing() {
             Invierte en tu <span className="gradient-text">mejor versión</span>.
           </h2>
           <p className="section-lead" style={{ marginInline: 'auto' }}>
-            Sin permanencia. Matrícula gratis este mes. Cancela cuando quieras.
+            Planes <strong style={{ color: 'var(--text)' }}>desde $60 al mes</strong>.
+            Escríbenos para conocer el valor de cada plan según tu edad y sede.
           </p>
+          <span className="pricing__badge">Desde $60 / mes</span>
         </header>
 
         <div className="pricing">

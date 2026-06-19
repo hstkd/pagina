@@ -767,6 +767,17 @@
 /* =========================================================
    Pricing
    ========================================================= */
+.pricing__badge {
+  display: inline-block;
+  margin: 22px auto 0;
+  padding: 9px 20px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--gold);
+  background: rgba(59, 111, 224, 0.12);
+  border: 1px solid var(--border-strong);
+}
 .pricing {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
