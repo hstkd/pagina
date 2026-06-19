@@ -141,13 +141,17 @@ export const INSTRUCTORS = [
   },
 ]
 
+// sede: 'quito' = solo disponible en la sede de Quito.
+// El resto de horarios (tarde) son iguales en Quito y Cumbayá.
+const MORNING = { time: '07:00', name: 'Todas las edades', sede: 'quito' }
+
 export const SCHEDULE = [
-  { day: 'Lunes', slots: ['17:00 TaekwonKids', '18:00 Infantiles', '20:00 Senior'] },
-  { day: 'Martes', slots: ['18:00 Cadetes', '20:00 Élite'] },
-  { day: 'Miércoles', slots: ['17:00 TaekwonKids', '18:00 Infantiles', '20:00 Senior'] },
-  { day: 'Jueves', slots: ['18:00 Cadetes', '20:00 Élite'] },
-  { day: 'Viernes', slots: ['18:00 Kyorugi', '20:00 Poomsae'] },
-  { day: 'Sábado', slots: ['10:00 Equipos', '11:30 Entreno abierto'] },
+  { day: 'Lunes', slots: [MORNING, { time: '17:00', name: 'TaekwonKids' }, { time: '18:00', name: 'Infantiles' }, { time: '20:00', name: 'Senior' }] },
+  { day: 'Martes', slots: [MORNING, { time: '18:00', name: 'Cadetes' }, { time: '20:00', name: 'Élite' }] },
+  { day: 'Miércoles', slots: [MORNING, { time: '17:00', name: 'TaekwonKids' }, { time: '18:00', name: 'Infantiles' }, { time: '20:00', name: 'Senior' }] },
+  { day: 'Jueves', slots: [MORNING, { time: '18:00', name: 'Cadetes' }, { time: '20:00', name: 'Élite' }] },
+  { day: 'Viernes', slots: [MORNING, { time: '18:00', name: 'Kyorugi' }, { time: '20:00', name: 'Poomsae' }] },
+  { day: 'Sábado', slots: [{ time: '10:00', name: 'Equipos' }, { time: '11:30', name: 'Entreno abierto' }] },
 ]
 
 export const TESTIMONIALS = [

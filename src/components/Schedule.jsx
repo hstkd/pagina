@@ -10,8 +10,8 @@ export default function Schedule() {
             Encuentra tu <span className="gradient-text">momento</span> para entrenar.
           </h2>
           <p className="section-lead">
-            Clases de mañana, tarde y noche. Flexibilidad total para que el
-            Taekwondo encaje en tu vida.
+            Clases de tarde iguales en Quito y Cumbayá. Además, la sede de Quito
+            suma un turno de mañana para todas las edades.
           </p>
         </header>
 
@@ -25,12 +25,28 @@ export default function Schedule() {
               <span className="schedule__name">{d.day}</span>
               <ul className="schedule__slots">
                 {d.slots.map((s) => (
-                  <li key={s}>{s}</li>
+                  <li
+                    key={s.time + s.name}
+                    className={s.sede === 'quito' ? 'is-quito' : ''}
+                  >
+                    <span className="schedule__time">{s.time}</span>
+                    <span className="schedule__class">{s.name}</span>
+                    {s.sede === 'quito' && (
+                      <span className="schedule__tag">Quito</span>
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
+
+        <p className="schedule__note reveal">
+          <span className="schedule__dot" /> Turno de mañana{' '}
+          <strong>07:00–08:00</strong> (todas las edades) disponible{' '}
+          <strong>solo en la sede de Quito</strong>. Las clases de tarde son
+          iguales en ambas sedes.
+        </p>
       </div>
     </section>
   )
