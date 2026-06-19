@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="container nav__inner">
         <a href="#top" className="brand" onClick={() => setOpen(false)}>
           <span className="brand__mark brand__mark--img">
-            <img src="/logo.png" alt={`${BRAND.full} logo`} width="40" height="40" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt={`${BRAND.full} logo`} width="40" height="40" />
           </span>
           <span className="brand__name">
             {BRAND.name}

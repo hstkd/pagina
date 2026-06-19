@@ -24,7 +24,9 @@ export default function Locations() {
             const directions = `https://www.google.com/maps/dir/?api=1&destination=${enc(full)}`
             return (
               <article
-                className="location glass reveal"
+                className={`location glass reveal ${
+                  i % 2 === 0 ? 'reveal--left' : 'reveal--right'
+                }`}
                 key={l.city}
                 style={{ transitionDelay: `${i * 90}ms` }}
               >

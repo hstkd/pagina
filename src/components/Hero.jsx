@@ -84,7 +84,7 @@ export default function Hero() {
           <div className="hero__ring hero__ring--1" />
           <div className="hero__ring hero__ring--2" />
           <div className="hero__disc">
-            <img src="/logo.png" alt={`${BRAND.full} logo`} />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt={`${BRAND.full} logo`} />
           </div>
 
           <span className="hero__chip hero__chip--1">

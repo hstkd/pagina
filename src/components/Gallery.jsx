@@ -23,7 +23,11 @@ export default function Gallery() {
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               {g.src ? (
-                <img src={g.src} alt={g.caption} loading="lazy" />
+                <img
+                  src={`${import.meta.env.BASE_URL}${g.src.replace(/^\//, '')}`}
+                  alt={g.caption}
+                  loading="lazy"
+                />
               ) : (
                 <div className="gallery__ph" aria-hidden="true">
                   <svg viewBox="0 0 64 64" width="56" height="56">

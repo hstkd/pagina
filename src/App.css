@@ -1,4 +1,24 @@
 /* =========================================================
+   Indicador de progreso de scroll
+   ========================================================= */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 200;
+  pointer-events: none;
+}
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  box-shadow: 0 0 12px rgba(59, 111, 224, 0.7);
+  transition: width 0.12s linear;
+}
+
+/* =========================================================
    Fondo ambiental
    ========================================================= */
 .bg {

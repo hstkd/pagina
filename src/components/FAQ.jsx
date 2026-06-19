@@ -7,7 +7,7 @@ export default function FAQ() {
   return (
     <section className="section" id="faq">
       <div className="container faq__layout">
-        <header className="section-head faq__head reveal">
+        <header className="section-head faq__head reveal reveal--left">
           <span className="eyebrow">Preguntas frecuentes</span>
           <h2 className="section-title">
             Resolvemos tus <span className="gradient-text">dudas</span>.
@@ -26,7 +26,7 @@ export default function FAQ() {
           </a>
         </header>
 
-        <div className="faq__list reveal">
+        <div className="faq__list reveal reveal--right">
           {FAQS.map((item, i) => {
             const isOpen = open === i
             return (

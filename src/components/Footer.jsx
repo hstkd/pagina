@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer__brand">
           <a href="#top" className="brand">
             <span className="brand__mark brand__mark--img brand__mark--lg">
-              <img src="/logo.png" alt={`${BRAND.full} logo`} width="64" height="64" />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt={`${BRAND.full} logo`} width="64" height="64" />
             </span>
             <span className="brand__name">
               {BRAND.name}

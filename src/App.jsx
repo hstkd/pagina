@@ -1,5 +1,6 @@
 import { useReveal } from './hooks/useReveal'
 import Background from './components/Background'
+import ScrollProgress from './components/ScrollProgress'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <>
       <Background />
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />
