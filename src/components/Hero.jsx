@@ -34,9 +34,9 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p className="hero__lead" variants={item}>
-          {BRAND.name} es una academia de Taekwondo donde la técnica milenaria
-          coreana se une a un entrenamiento de élite. Disciplina, respeto y
-          espíritu indomable para todas las edades.
+          {BRAND.full} es una academia donde la técnica milenaria coreana se une
+          a un entrenamiento de alto nivel. Disciplina, respeto y espíritu
+          indomable para todas las edades, en Quito y Cumbayá.
         </motion.p>
 
         <motion.div className="hero__actions" variants={item}>
@@ -59,13 +59,13 @@ export default function Hero() {
 
         <motion.div className="hero__proof" variants={item}>
           <div className="hero__avatars">
-            {['DS', 'LR', 'KJ', '+'].map((a) => (
+            {['HS', 'KY', 'PM', '+'].map((a) => (
               <span key={a}>{a}</span>
             ))}
           </div>
           <div className="hero__proof-text">
-            <strong>+1200 alumnos</strong>
-            <span>confían en nuestros maestros</span>
+            <strong>2 sedes · 5 programas</strong>
+            <span>en Quito y Cumbayá</span>
           </div>
         </motion.div>
       </motion.div>

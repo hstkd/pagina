@@ -8,10 +8,12 @@ import Programs from './components/Programs'
 import Belts from './components/Belts'
 import Instructors from './components/Instructors'
 import Schedule from './components/Schedule'
+import Locations from './components/Locations'
 import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import WhatsAppFab from './components/WhatsAppFab'
 import './App.css'
 
 export default function App() {
@@ -29,11 +31,13 @@ export default function App() {
         <Belts />
         <Instructors />
         <Schedule />
+        <Locations />
         <Testimonials />
         <Pricing />
         <CTA />
       </main>
       <Footer />
+      <WhatsAppFab />
     </>
   )
 }

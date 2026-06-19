@@ -1,20 +1,38 @@
 // Contenido del sitio centralizado para facilitar la edición.
 
 export const BRAND = {
-  name: 'Dojang Élite',
+  name: 'Henry Sigchos',
+  full: 'Henry Sigchos Taekwondo',
   korean: '태권도',
-  tagline: 'Academia de Taekwondo',
-  phone: '+34 600 123 456',
-  email: 'hola@dojangelite.es',
-  address: 'Calle del Tigre Blanco 7, Madrid',
-  instagram: '@dojangelite',
+  tagline: 'Taekwondo · Desde 2020',
+  since: 2020,
+  phone: '0987465883',
+  phoneIntl: '+593987465883',
+  email: 'henry21.sigchos@gmail.com',
+  instagram: '@taekwondo_hs',
+  instagramUrl: 'https://instagram.com/taekwondo_hs',
 }
 
+export const LOCATIONS = [
+  {
+    city: 'Quito',
+    address: 'Av. Brasil N46-88 y Lucas Majano',
+    mapsUrl:
+      'https://www.google.com/maps/search/?api=1&query=Av.+Brasil+N46-88+y+Lucas+Majano+Quito',
+  },
+  {
+    city: 'Cumbayá',
+    address: 'Francisco de Orellana 362',
+    mapsUrl:
+      'https://www.google.com/maps/search/?api=1&query=Francisco+de+Orellana+362+Cumbaya',
+  },
+]
+
 export const STATS = [
-  { value: 18, suffix: '+', label: 'Años formando campeones' },
-  { value: 1200, suffix: '+', label: 'Alumnos graduados' },
-  { value: 34, suffix: '', label: 'Medallas nacionales' },
-  { value: 6, suffix: '', label: 'Maestros cinturón negro' },
+  { value: 6, suffix: '+', label: 'Años formando taekwondistas' },
+  { value: 2, suffix: '', label: 'Sedes: Quito y Cumbayá' },
+  { value: 5, suffix: '', label: 'Programas para cada edad' },
+  { value: 2, suffix: '', label: 'Equipos de competencia' },
 ]
 
 // Los cinco principios del Taekwondo
@@ -49,128 +67,143 @@ export const TENETS = [
 export const PROGRAMS = [
   {
     tag: '4–7 años',
-    title: 'Pequeños Tigres',
+    title: 'TaekwonKids',
     text: 'Psicomotricidad, coordinación y valores a través del juego. La iniciación perfecta.',
     points: ['Disciplina lúdica', 'Coordinación motriz', 'Confianza y respeto'],
     accent: 'gold',
   },
   {
-    tag: '8–14 años',
-    title: 'Infantil & Juvenil',
+    tag: '8–11 años',
+    title: 'Infantiles',
     text: 'Técnica formal, formas (poomsae) y combate ligero en un entorno seguro y motivador.',
     points: ['Técnica y poomsae', 'Combate controlado', 'Concentración escolar'],
+    accent: 'red',
+  },
+  {
+    tag: '12–16 años',
+    title: 'Cadetes',
+    text: 'Desarrollo físico y técnico para la etapa clave: velocidad, potencia y estrategia.',
+    points: ['Potencia y velocidad', 'Estrategia de combate', 'Trabajo en equipo'],
     accent: 'red',
     featured: true,
   },
   {
-    tag: '+15 años',
-    title: 'Adultos',
+    tag: '17+ años',
+    title: 'Senior',
     text: 'Ponte en forma, libera estrés y aprende defensa personal real a tu propio ritmo.',
     points: ['Fuerza y flexibilidad', 'Defensa personal', 'Cardio de alto impacto'],
     accent: 'gold',
   },
   {
-    tag: 'Élite',
-    title: 'Equipo de Competición',
-    text: 'Entrenamiento de alto rendimiento para deportistas que buscan el podio nacional.',
-    points: ['Preparación física', 'Estrategia de combate', 'Calendario de torneos'],
+    tag: 'Alto rendimiento',
+    title: 'Élite',
+    text: 'Entrenamiento de alto nivel para deportistas que buscan el podio y la excelencia.',
+    points: ['Preparación física', 'Mentalidad ganadora', 'Seguimiento individual'],
     accent: 'red',
+  },
+  {
+    tag: 'Competencia',
+    title: 'Equipos Kyorugi y Poomsae',
+    text: 'Selección de competidores en las dos modalidades olímpicas: combate y formas.',
+    points: ['Kyorugi (combate)', 'Poomsae (formas)', 'Calendario de torneos'],
+    accent: 'gold',
   },
 ]
 
 export const BELTS = [
   { name: 'Blanco', color: '#f4f4f6', textDark: true, level: 'Inicio · Pureza' },
-  { name: 'Amarillo', color: '#f5b14c', textDark: true, level: 'La tierra' },
+  { name: 'Amarillo', color: '#f5c542', textDark: true, level: 'La tierra' },
   { name: 'Verde', color: '#2fae6b', textDark: false, level: 'El crecimiento' },
   { name: 'Azul', color: '#2f6fd8', textDark: false, level: 'El cielo' },
   { name: 'Rojo', color: '#e0142a', textDark: false, level: 'El peligro' },
   { name: 'Negro', color: '#101014', textDark: false, level: 'Maestría · Dan' },
 ]
 
+// Nota: completa/edita los nombres y datos del cuerpo técnico cuando quieras.
 export const INSTRUCTORS = [
   {
-    name: 'Maestro Daniel Sáenz',
-    rank: '6º Dan · Director técnico',
-    bio: 'Ex seleccionado nacional. 25 años formando competidores de élite y campeones de carácter.',
-    initials: 'DS',
+    name: 'Henry Sigchos',
+    rank: 'Maestro fundador · Director técnico',
+    bio: 'Fundador de Henry Sigchos Taekwondo (2020). Forma a alumnos de todas las edades y a competidores con disciplina, técnica y cercanía.',
+    initials: 'HS',
   },
   {
-    name: 'Maestra Lucía Romero',
-    rank: '4º Dan · Infantil',
-    bio: 'Especialista en pedagogía deportiva infantil. Convierte el tatami en un lugar de crecimiento.',
-    initials: 'LR',
+    name: 'Cuerpo técnico Kyorugi',
+    rank: 'Entrenadores de combate',
+    bio: 'Equipo dedicado a la preparación de combate olímpico: táctica, velocidad y acondicionamiento para la competencia.',
+    initials: 'KY',
   },
   {
-    name: 'Maestro Kim Jae-won',
-    rank: '5º Dan · Combate',
-    bio: 'Entrenador de combate olímpico formado en Seúl. Disciplina técnica de raíz coreana.',
-    initials: 'KJ',
+    name: 'Cuerpo técnico Poomsae',
+    rank: 'Entrenadores de formas',
+    bio: 'Especialistas en poomsae que pulen la precisión, el equilibrio y la expresión técnica de cada movimiento.',
+    initials: 'PM',
   },
 ]
 
 export const SCHEDULE = [
-  { day: 'Lunes', slots: ['17:00 Tigres', '18:00 Infantil', '20:00 Adultos'] },
-  { day: 'Martes', slots: ['18:00 Juvenil', '20:00 Competición'] },
-  { day: 'Miércoles', slots: ['17:00 Tigres', '18:00 Infantil', '20:00 Adultos'] },
-  { day: 'Jueves', slots: ['18:00 Juvenil', '20:00 Competición'] },
-  { day: 'Viernes', slots: ['18:00 Defensa personal', '20:00 Combate libre'] },
-  { day: 'Sábado', slots: ['10:00 Poomsae', '11:30 Entreno abierto'] },
+  { day: 'Lunes', slots: ['17:00 TaekwonKids', '18:00 Infantiles', '20:00 Senior'] },
+  { day: 'Martes', slots: ['18:00 Cadetes', '20:00 Élite'] },
+  { day: 'Miércoles', slots: ['17:00 TaekwonKids', '18:00 Infantiles', '20:00 Senior'] },
+  { day: 'Jueves', slots: ['18:00 Cadetes', '20:00 Élite'] },
+  { day: 'Viernes', slots: ['18:00 Kyorugi', '20:00 Poomsae'] },
+  { day: 'Sábado', slots: ['10:00 Equipos', '11:30 Entreno abierto'] },
 ]
 
 export const TESTIMONIALS = [
   {
-    text: 'Mi hija llegó tímida y hoy es cinturón verde con una seguridad increíble. El equipo es excepcional.',
+    text: 'Mi hija llegó tímida y hoy entrena con una seguridad increíble. El profe Henry es excepcional con los niños.',
     name: 'Marta Giménez',
     role: 'Madre de alumna',
   },
   {
-    text: 'Empecé con 38 años sin haber hecho deporte. Un año después estoy en la mejor forma de mi vida.',
+    text: 'Empecé de adulto sin haber hecho deporte y un año después estoy en la mejor forma de mi vida.',
     name: 'Carlos Vidal',
-    role: 'Alumno adultos',
+    role: 'Programa Senior',
   },
   {
-    text: 'La preparación del equipo de competición es de otro nivel. Conseguí mi primera medalla nacional.',
+    text: 'La preparación del equipo de competencia es de otro nivel. Conseguí mi primera medalla.',
     name: 'Aitana López',
-    role: 'Equipo élite',
+    role: 'Equipo Kyorugi',
   },
 ]
 
 export const PLANS = [
   {
     name: 'Iniciación',
-    price: '39',
-    cadence: '/mes',
-    desc: 'Para empezar tu camino marcial.',
-    features: ['2 clases / semana', 'Acceso a poomsae', 'Cinturón blanco incluido', 'Seguro deportivo'],
-    cta: 'Empezar',
+    price: '',
+    cadence: 'Mensual',
+    desc: 'Para empezar tu camino en el Taekwondo.',
+    features: ['2 clases / semana', 'Acceso a poomsae', 'Cinturón blanco incluido', 'Una sede a elegir'],
+    cta: 'Quiero empezar',
     featured: false,
   },
   {
     name: 'Guerrero',
-    price: '55',
-    cadence: '/mes',
-    desc: 'El plan más elegido por nuestros alumnos.',
+    price: '',
+    cadence: 'Mensual',
+    desc: 'El plan más completo para avanzar de grado.',
     features: [
       'Clases ilimitadas',
       'Combate y defensa personal',
-      'Exámenes de grado incluidos',
-      'Acceso a sala de musculación',
+      'Exámenes de grado',
+      'Acceso a ambas sedes',
       'Eventos y seminarios',
     ],
-    cta: 'Hazte Guerrero',
+    cta: 'Más información',
     featured: true,
   },
   {
     name: 'Élite',
-    price: '89',
-    cadence: '/mes',
-    desc: 'Alto rendimiento y competición.',
+    price: '',
+    cadence: 'Mensual',
+    desc: 'Alto rendimiento y competencia.',
     features: [
       'Todo lo del plan Guerrero',
-      'Equipo de competición',
+      'Equipos Kyorugi y Poomsae',
       'Preparación física personalizada',
       'Calendario de torneos',
-      'Mentoría con el director',
+      'Mentoría con el maestro',
     ],
     cta: 'Aspirar al podio',
     featured: false,

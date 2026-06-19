@@ -6,6 +6,14 @@ export default function CTA() {
 
   const onSubmit = (e) => {
     e.preventDefault()
+    const data = new FormData(e.currentTarget)
+    const name = data.get('name') || ''
+    const phone = data.get('phone') || ''
+    const program = data.get('program') || 'Taekwondo'
+    const sede = data.get('sede') || 'a definir'
+    const msg = `Hola Henry Sigchos Taekwondo 👋, soy ${name}. Quiero reservar una clase de prueba.\n• Programa: ${program}\n• Sede: ${sede}\n• Mi teléfono: ${phone}`
+    const url = `https://wa.me/${BRAND.phoneIntl.replace('+', '')}?text=${encodeURIComponent(msg)}`
+    window.open(url, '_blank', 'noopener')
     setSent(true)
   }
 
@@ -25,19 +33,30 @@ export default function CTA() {
               qué cientos de familias nos eligen. Sin compromiso.
             </p>
             <ul className="cta__list">
-              <li>📍 {BRAND.address}</li>
-              <li>📞 {BRAND.phone}</li>
-              <li>✉️ {BRAND.email}</li>
+              <li>
+                <a href={`https://wa.me/${BRAND.phoneIntl.replace('+', '')}`} target="_blank" rel="noreferrer">
+                  📱 WhatsApp · {BRAND.phone}
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${BRAND.email}`}>✉️ {BRAND.email}</a>
+              </li>
+              <li>
+                <a href={BRAND.instagramUrl} target="_blank" rel="noreferrer">
+                  📸 {BRAND.instagram}
+                </a>
+              </li>
+              <li>📍 Sedes en Quito y Cumbayá</li>
             </ul>
           </div>
 
           {sent ? (
             <div className="cta__form cta__success">
               <div className="cta__success-icon">✓</div>
-              <h3>¡Reserva recibida!</h3>
+              <h3>¡Casi listo!</h3>
               <p>
-                Gracias por tu interés. Te contactaremos en menos de 24h para
-                confirmar tu clase de prueba. ¡Nos vemos en el tatami!
+                Abrimos WhatsApp con tu mensaje. Solo pulsa enviar y te
+                confirmamos tu clase de prueba. ¡Nos vemos en el tatami!
               </p>
             </div>
           ) : (
@@ -56,18 +75,30 @@ export default function CTA() {
                   <option value="" disabled>
                     Selecciona…
                   </option>
-                  <option>Pequeños Tigres (4–7)</option>
-                  <option>Infantil & Juvenil (8–14)</option>
-                  <option>Adultos (+15)</option>
-                  <option>Equipo de competición</option>
+                  <option>TaekwonKids (4–7)</option>
+                  <option>Infantiles (8–11)</option>
+                  <option>Cadetes (12–16)</option>
+                  <option>Senior (17+)</option>
+                  <option>Élite</option>
+                  <option>Equipos de competencia</option>
+                </select>
+              </label>
+              <label>
+                Sede
+                <select name="sede" defaultValue="">
+                  <option value="" disabled>
+                    Selecciona…
+                  </option>
+                  <option>Quito</option>
+                  <option>Cumbayá</option>
                 </select>
               </label>
               <button type="submit" className="btn btn-primary cta__submit">
-                Reservar mi clase gratis
+                Reservar por WhatsApp
               </button>
               <small className="cta__legal">
-                Al enviar aceptas ser contactado por {BRAND.name}. Nunca
-                compartimos tus datos.
+                Se abrirá WhatsApp con tu mensaje listo para enviar a{' '}
+                {BRAND.full}.
               </small>
             </form>
           )}

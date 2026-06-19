@@ -3,22 +3,23 @@
    ========================================================= */
 
 :root {
-  /* Paleta */
-  --bg: #08080a;
-  --bg-2: #0d0d11;
-  --surface: #141419;
-  --surface-2: #1b1b22;
+  /* Paleta — basada en el logo: azul marino + plata */
+  --bg: #060911;
+  --bg-2: #0a0e1a;
+  --surface: #111726;
+  --surface-2: #182032;
   --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(150, 180, 255, 0.18);
 
-  --text: #f4f4f6;
-  --muted: #a0a0ad;
-  --faint: #6b6b78;
+  --text: #f3f5fa;
+  --muted: #9aa3b8;
+  --faint: #5f6880;
 
-  --red: #ff2e3f;
-  --red-deep: #c8102e;
-  --gold: #f5b14c;
-  --gold-soft: #ffd089;
+  /* "red" = azul primario · "gold" = azul claro/plata (acento) */
+  --red: #3b6fe0;
+  --red-deep: #1e2a5e;
+  --gold: #6ea8ff;
+  --gold-soft: #a9cbff;
 
   /* Tipografía */
   --font-display: 'Sora', system-ui, sans-serif;
@@ -30,7 +31,7 @@
   --radius-lg: 26px;
 
   /* Sombras / glow */
-  --glow-red: 0 0 60px rgba(255, 46, 63, 0.35);
+  --glow-red: 0 0 60px rgba(59, 111, 224, 0.35);
   --shadow-card: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
 }
 

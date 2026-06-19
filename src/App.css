@@ -14,10 +14,10 @@
   --mx: 0px;
   --my: 0px;
   background:
-    radial-gradient(40% 40% at 18% 12%, rgba(255, 46, 63, 0.22), transparent 70%),
-    radial-gradient(45% 45% at 85% 18%, rgba(245, 177, 76, 0.16), transparent 70%),
-    radial-gradient(50% 50% at 70% 88%, rgba(200, 16, 46, 0.18), transparent 72%),
-    radial-gradient(40% 40% at 12% 80%, rgba(245, 177, 76, 0.1), transparent 70%);
+    radial-gradient(40% 40% at 18% 12%, rgba(59, 111, 224, 0.22), transparent 70%),
+    radial-gradient(45% 45% at 85% 18%, rgba(110, 168, 255, 0.16), transparent 70%),
+    radial-gradient(50% 50% at 70% 88%, rgba(47, 90, 200, 0.18), transparent 72%),
+    radial-gradient(40% 40% at 12% 80%, rgba(110, 168, 255, 0.1), transparent 70%);
   transform: translate3d(var(--mx), var(--my), 0);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   filter: blur(10px);
@@ -81,6 +81,21 @@
   border-radius: 13px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
+}
+.brand__mark--img {
+  background: #fff;
+  padding: 4px;
+  overflow: hidden;
+}
+.brand__mark--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.brand__mark--lg {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
 }
 .brand__name {
   display: flex;
@@ -419,7 +434,7 @@
    ========================================================= */
 .programs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .program {
@@ -435,8 +450,8 @@
 }
 .program:hover { transform: translateY(-10px); border-color: var(--border-strong); }
 .program--featured {
-  border-color: rgba(255, 46, 63, 0.4);
-  background: linear-gradient(180deg, rgba(255, 46, 63, 0.08), var(--surface));
+  border-color: rgba(59, 111, 224, 0.4);
+  background: linear-gradient(180deg, rgba(59, 111, 224, 0.08), var(--surface));
 }
 .program__glow {
   position: absolute;
@@ -449,8 +464,8 @@
   opacity: 0.5;
   pointer-events: none;
 }
-.program__glow--red { background: rgba(255, 46, 63, 0.5); }
-.program__glow--gold { background: rgba(245, 177, 76, 0.35); }
+.program__glow--red { background: rgba(59, 111, 224, 0.5); }
+.program__glow--gold { background: rgba(110, 168, 255, 0.35); }
 .program__ribbon {
   position: absolute;
   top: 18px;
@@ -557,7 +572,7 @@
   display: grid;
   place-items: center;
   background:
-    radial-gradient(120% 120% at 50% 0%, rgba(255, 46, 63, 0.22), transparent 60%),
+    radial-gradient(120% 120% at 50% 0%, rgba(59, 111, 224, 0.22), transparent 60%),
     linear-gradient(160deg, #1c1c23, #101014);
 }
 .instructor__initials {
@@ -631,6 +646,50 @@
 @media (max-width: 520px) { .schedule { grid-template-columns: repeat(2, 1fr); } }
 
 /* =========================================================
+   Locations / Sedes
+   ========================================================= */
+.locations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.location {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 30px 30px;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.location:hover { transform: translateY(-8px); border-color: var(--border-strong); }
+.location__pin {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  color: var(--gold);
+  background: rgba(59, 111, 224, 0.12);
+  border: 1px solid var(--border);
+}
+.location__body h3 { font-size: 1.4rem; font-weight: 700; }
+.location__body p { color: var(--muted); margin-top: 6px; font-size: 0.96rem; }
+.location__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gold);
+  transition: gap 0.25s ease;
+}
+.location:hover .location__link { gap: 12px; }
+@media (max-width: 720px) {
+  .locations { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
    Testimonials
    ========================================================= */
 .testimonials__grid {
@@ -694,9 +753,9 @@
 }
 .plan:hover { transform: translateY(-8px); border-color: var(--border-strong); }
 .plan--featured {
-  border-color: rgba(255, 46, 63, 0.5);
-  background: linear-gradient(180deg, rgba(255, 46, 63, 0.1), var(--surface) 60%);
-  box-shadow: 0 30px 70px -30px rgba(255, 46, 63, 0.4);
+  border-color: rgba(59, 111, 224, 0.5);
+  background: linear-gradient(180deg, rgba(59, 111, 224, 0.1), var(--surface) 60%);
+  box-shadow: 0 30px 70px -30px rgba(59, 111, 224, 0.4);
 }
 .plan--featured:hover { transform: translateY(-14px); }
 .plan__badge {
@@ -727,6 +786,12 @@
   gap: 2px;
 }
 .plan__currency { font-size: 1.4rem; margin-top: 8px; color: var(--muted); }
+.plan__quote {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 2.2rem;
+}
 .plan__cadence {
   align-self: flex-end;
   font-family: var(--font-body);
@@ -776,7 +841,7 @@
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 46, 63, 0.3), transparent 70%);
+  background: radial-gradient(circle, rgba(59, 111, 224, 0.3), transparent 70%);
   filter: blur(40px);
   pointer-events: none;
 }
@@ -793,6 +858,12 @@
   flex-direction: column;
   gap: 12px;
   font-size: 0.96rem;
+}
+.cta__list a {
+  transition: color 0.2s ease;
+}
+.cta__list a:hover {
+  color: var(--gold);
 }
 .cta__form {
   position: relative;
@@ -852,6 +923,34 @@
 .cta__success p { color: var(--muted); max-width: 40ch; }
 @media (max-width: 860px) {
   .cta { grid-template-columns: 1fr; gap: 36px; padding: 36px 28px; }
+}
+
+/* =========================================================
+   Botón flotante de WhatsApp
+   ========================================================= */
+.wa-fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 12px 28px -6px rgba(37, 211, 102, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: waPop 0.5s 0.8s both;
+}
+.wa-fab:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 18px 36px -8px rgba(37, 211, 102, 0.7);
+}
+@keyframes waPop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 /* =========================================================

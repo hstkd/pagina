@@ -1,9 +1,9 @@
-# Dojang Élite — Academia de Taekwondo 태권도
+# Henry Sigchos Taekwondo 태권도
 
-Web premium para una academia de Taekwondo, construida con **React + Vite**.
-Diseño moderno y visualmente cuidado: estética marcial en negro profundo con
-acentos carmesí y oro, fondo ambiental reactivo, animaciones al hacer scroll y
-totalmente responsive.
+Web de la academia **Henry Sigchos Taekwondo** (Quito y Cumbayá, desde 2020),
+construida con **React + Vite**. Diseño moderno y visualmente cuidado: paleta
+azul marino y plata tomada del logo, fondo ambiental reactivo, animaciones al
+hacer scroll, reserva por WhatsApp y totalmente responsive.
 
 ## ✨ Características
 
@@ -12,11 +12,13 @@ totalmente responsive.
 - **Contadores animados** de estadísticas al entrar en pantalla.
 - **Los 5 principios** del Taekwondo (cortesía, integridad, perseverancia,
   autocontrol, espíritu indomable).
-- **Programas** por edad y nivel: Pequeños Tigres, Infantil & Juvenil, Adultos
-  y Equipo de Competición.
+- **Programas** por edad y nivel: TaekwonKids, Infantiles, Cadetes, Senior,
+  Élite y equipos de competencia (Kyorugi y Poomsae).
 - **Camino del cinturón** visual, de blanco a negro.
-- **Maestros**, **horario semanal**, **testimonios** y **planes de precios**.
-- **Formulario** de reserva de clase de prueba con estado de confirmación.
+- **Sedes** de Quito y Cumbayá con enlace a Google Maps.
+- **Maestros**, **horario semanal**, **testimonios** y **planes**.
+- **Formulario** de reserva que abre WhatsApp con el mensaje listo, más botón
+  flotante de WhatsApp.
 - Fondo con malla de gradientes reactiva al ratón, rejilla y grano.
 - Accesible: respeta `prefers-reduced-motion`, navegación por teclado y
   semántica HTML.

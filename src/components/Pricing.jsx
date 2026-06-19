@@ -25,9 +25,18 @@ export default function Pricing() {
               <h3 className="plan__name">{p.name}</h3>
               <p className="plan__desc">{p.desc}</p>
               <div className="plan__price">
-                <span className="plan__currency">€</span>
-                {p.price}
-                <span className="plan__cadence">{p.cadence}</span>
+                {p.price ? (
+                  <>
+                    <span className="plan__currency">$</span>
+                    {p.price}
+                    <span className="plan__cadence">{p.cadence}</span>
+                  </>
+                ) : (
+                  <span className="plan__quote">
+                    Consultar
+                    <span className="plan__cadence">{p.cadence}</span>
+                  </span>
+                )}
               </div>
               <ul className="plan__features">
                 {p.features.map((f) => (

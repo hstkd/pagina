@@ -7,25 +7,17 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <a href="#top" className="brand">
-            <span className="brand__mark">
-              <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
-                <path d="M32 10 L20 32 L32 32 L20 54 L46 26 L34 26 Z" fill="url(#fg)" />
-                <defs>
-                  <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stopColor="#ff2e3f" />
-                    <stop offset="1" stopColor="#f5b14c" />
-                  </linearGradient>
-                </defs>
-              </svg>
+            <span className="brand__mark brand__mark--img brand__mark--lg">
+              <img src="/logo.png" alt={`${BRAND.full} logo`} width="64" height="64" />
             </span>
             <span className="brand__name">
               {BRAND.name}
-              <small>{BRAND.korean}</small>
+              <small>TAEKWONDO</small>
             </span>
           </a>
           <p>
-            Academia de Taekwondo. Disciplina, técnica y espíritu indomable desde
-            2008.
+            Academia de Taekwondo en Quito y Cumbayá. Disciplina, técnica y
+            espíritu indomable desde {BRAND.since}.
           </p>
         </div>
 
@@ -39,17 +31,20 @@ export default function Footer() {
 
         <nav className="footer__col">
           <h4>Información</h4>
+          <a href="#sedes">Sedes</a>
           <a href="#horarios">Horarios</a>
-          <a href="#precios">Precios</a>
+          <a href="#precios">Planes</a>
           <a href="#contacto">Clase de prueba</a>
         </nav>
 
         <div className="footer__col">
           <h4>Contacto</h4>
-          <a href={`tel:${BRAND.phone.replace(/\s/g, '')}`}>{BRAND.phone}</a>
+          <a href={`tel:${BRAND.phoneIntl}`}>{BRAND.phone}</a>
           <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
-          <span className="footer__muted">{BRAND.address}</span>
-          <span className="footer__muted">{BRAND.instagram}</span>
+          <a href={BRAND.instagramUrl} target="_blank" rel="noreferrer">
+            {BRAND.instagram}
+          </a>
+          <span className="footer__muted">Quito · Cumbayá</span>
         </div>
       </div>
 

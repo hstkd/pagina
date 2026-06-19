@@ -6,7 +6,8 @@ const LINKS = [
   { href: '#filosofia', label: 'Filosofía' },
   { href: '#maestros', label: 'Maestros' },
   { href: '#horarios', label: 'Horarios' },
-  { href: '#precios', label: 'Precios' },
+  { href: '#sedes', label: 'Sedes' },
+  { href: '#precios', label: 'Planes' },
 ]
 
 export default function Navbar() {
@@ -28,23 +29,12 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="container nav__inner">
         <a href="#top" className="brand" onClick={() => setOpen(false)}>
-          <span className="brand__mark">
-            <svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true">
-              <path
-                d="M32 10 L20 32 L32 32 L20 54 L46 26 L34 26 Z"
-                fill="url(#navg)"
-              />
-              <defs>
-                <linearGradient id="navg" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stopColor="#ff2e3f" />
-                  <stop offset="1" stopColor="#f5b14c" />
-                </linearGradient>
-              </defs>
-            </svg>
+          <span className="brand__mark brand__mark--img">
+            <img src="/logo.png" alt={`${BRAND.full} logo`} width="40" height="40" />
           </span>
           <span className="brand__name">
             {BRAND.name}
-            <small>{BRAND.korean}</small>
+            <small>TAEKWONDO · 2020</small>
           </span>
         </a>
 
